@@ -1,68 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: light;
-  font-weight: 200;
-  src: url("../fonts/notokr-light.woff2") format("woff2");
-  unicode-range: U+AC00-D7A3;
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/notokr-regular.woff2") format("woff2");
-  unicode-range: U+AC00-D7A3;
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/notokr-medium.woff2") format("woff2");
-  unicode-range: U+AC00-D7A3;
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/notokr-bold.woff2") format("woff2");
-  unicode-range: U+AC00-D7A3;
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/notokr-black.woff2") format("woff2");
-  unicode-range: U+AC00-D7A3;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-style: light;
-  font-weight: 200;
-  src: url("../fonts/Pretendard-Light.woff2") format("woff2");
-  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./fonts/Pretendard-Regular.woff2") format("woff2");
-  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/Pretendard-Medium.woff2") format("woff2");
-  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
-}
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/Pretendard-Bold.woff2") format("woff2");
-  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
-}
 *,
 *:before,
 *:after {
@@ -133,4 +69,292 @@ ul,
 li {
   letter-spacing: -0.4px;
   list-style: none;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  overflow-y: scroll;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  background: #fff;
+}
+.wrap header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+.wrap header::before {
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+}
+.wrap header .inner {
+  max-width: 1120px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.wrap header .inner .logo {
+  font-size: 0;
+  color: transparent;
+}
+.wrap header .inner .logo::before {
+  content: "";
+  width: 121px;
+  height: 38px;
+  display: inline-block;
+}
+.wrap header .inner nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.wrap header .inner nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.wrap header .inner nav ul li {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.wrap header .inner nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.wrap header .inner nav ul li a.active {
+  position: relative;
+}
+.wrap header .inner nav ul li a.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #333;
+  bottom: 0;
+}
+.wrap .container {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.wrap .container h1 {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .container h1 small {
+  font-size: 0.8125rem;
+  color: rgba(51, 51, 51, 0.7);
+}
+.wrap .container .thum-area {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  overflow-x: auto;
+  gap: 20px;
+}
+.wrap .container .thum-area .img_001 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img001.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_001::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_002 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img002.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_002::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_003 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img003.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_003::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_004 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img004.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_004::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_005 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img005.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_005::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_006 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img006.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_006::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_007 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img007.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_007::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_008 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img008.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_008::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_009 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img009.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_009::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_0010 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img0010.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_0010::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_0011 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img0011.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_0011::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap .container .thum-area .img_0012 {
+  width: 100%;
+  padding-top: 62.68%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/img0012.svg") no-repeat center/contain;
+}
+.wrap .container .thum-area .img_0012::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=styles.css.map */
