@@ -1,0 +1,69 @@
+@import "var";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+//@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+/* 사파리 링크된 컬러 없애기 테스트 */
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 1);
+}
+* {
+  font-family: "Noto Sans KR", "Pretendard", AppleGothic, NanumGothic,
+    malgun gothic, dotum, sans-serif;
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  letter-spacing: -0.4px;
+}
+em {
+  font-style: normal;
+}
+
+/* 폰트사이즈 시스템에 따라 바뀌는거 방지 */
+html {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+}
+html * {
+  word-break: keep-all;
+}
+html,
+body {
+  height: 100vh;
+  overflow: hidden !important;
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: $base-color;
+  background: #fff;
+}
+body,
+input,
+button,
+textarea,
+strong,
+div,
+p,
+span,
+small,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  letter-spacing: -0.4px;
+  list-style: none;
+}
