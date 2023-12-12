@@ -1,0 +1,155 @@
+// 공통 변수
+$page-margin: 1.25rem;
+$minus-page-margin: -1.25rem;
+$page2-margin: 1.25rem;
+$minus-page2-margin: -1.25rem;
+$base-color: #333;
+$base-color70: rgba(51, 51, 51, 0.7);
+$base-color80: rgba(51, 51, 51, 0.8);
+$primary-color: #333;
+$theme-color: #1a6874;
+$theme2-color: #12d801;
+$border-color: #efefef;
+$hotpink-color: #f50058;
+$black-color: #000000;
+$white-color: #ffffff;
+$header-height: 72px;
+$radius10: 0.625rem;
+$default: 0.1;
+$list-bg: #f9f9f9;
+
+$list-border: #f8f8f8;
+$line-list-border: #e0e0e0;
+$side-padding: 1rem;
+$sub-text-color: #999;
+$is-highlight: #a50034;
+$coral: #ee5253;
+$blue: #376696;
+$dark-blue: #1c4e8e;
+$mint: #33ddb0;
+$green: #12d801;
+$orange: #ff793c;
+
+// font size
+@mixin basic-font {
+  font: {
+    size: 0.875rem;
+  }
+}
+
+// url images
+$url-images: "../../../images/";
+
+/////////////////////////////// color systems///////////////////////////////
+
+// primary color system
+$is-primary: $primary-color;
+$is-primary2: #12d801;
+
+// status color system
+$is-confirmed: #37bff1;
+$is-error: #ff0000;
+
+// gray color system
+$white: #fff;
+$gray-100: #f7f7f7;
+$gray-200: #efefef;
+$gray-300: #e0e0e0;
+$gray-400: #ccc;
+$gray-500: #aaa;
+$gray-600: #999;
+$gray-700: #808080;
+$gray-800: #666;
+$gray-850: #292c35;
+$gray-900: #1a1e27;
+
+// @mixin
+@mixin border-radius($radius10) {
+  border-radius: $radius10;
+}
+@mixin box-shadow(
+  $x: 0px,
+  $y: 4px,
+  $blur: 8px,
+  $rgba: rgba(0, 0, 0, $default: 1)
+) {
+  box-shadow: $x $y $blur $rgba;
+}
+// 참고
+// .testtest {
+//   @include border-radius(10px);
+//   @include box-shadow(0, 0, 0, rgba(0,0,0,0.5));
+//   &::before {
+//     content: 'sdfsdsdfsdf';
+//     @include box-shadow(5px, 5px, 5px, rgba(0,0,0,0.9));
+//   }
+//   border: 1px solid red;
+// }
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: light;
+  font-weight: 200;
+  src: url("../fonts/notokr-light.woff2") format("woff2");
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/notokr-regular.woff2") format("woff2");
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/notokr-medium.woff2") format("woff2");
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/notokr-bold.woff2") format("woff2");
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/notokr-black.woff2") format("woff2");
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: light;
+  font-weight: 200;
+  src: url("../fonts/Pretendard-Light.woff2") format("woff2");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040,
+    U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Pretendard-Regular.woff2") format("woff2");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040,
+    U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Pretendard-Medium.woff2") format("woff2");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040,
+    U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Pretendard-Bold.woff2") format("woff2");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040,
+    U+005B-0060, U+007B-007E;
+}

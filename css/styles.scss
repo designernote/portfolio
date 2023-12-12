@@ -1,11 +1,11 @@
 @import "var";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-//@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
 
 /* 사파리 링크된 컬러 없애기 테스트 */
 * {
@@ -67,3 +67,5 @@ li {
   letter-spacing: -0.4px;
   list-style: none;
 }
+
+// 스타일 시작
