@@ -220,6 +220,10 @@ li {
       }
     }
 
+    .projects {
+      margin-bottom: 60px;
+    }
+
     .thum-area {
       display: flex;
       width: 100%;
@@ -230,14 +234,38 @@ li {
       overflow-x: auto;
       gap: 20px;
 
+      // &.area {
+      //   @for $i from 1 to 99 {
+      //     &_#{$i} {
+      //       .img {
+      //         @for $i from 1 to 99 {
+      //           &_#{$i} {
+      //             .hidden {
+      //               opacity: 0;
+      //               @include imgs;
+      //               background: url("../images/img00#{$i}.svg")
+      //                 no-repeat
+      //                 center/contain;
+      //             }
+      //           }
+      //           &.active {
+      //             .hidden {
+      //               opacity: 1;
+      //             }
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+
       .img {
         @for $i from 1 to 99 {
           &_#{$i} {
             border: 1px solid rgba($color: #000000, $alpha: 0.2);
+
             @include imgs;
-            background: url("../images/img00#{$i}.svg")
-              no-repeat
-              center/contain;
+            background: url("../images/img#{$i}.svg") no-repeat center/contain;
           }
         }
 
