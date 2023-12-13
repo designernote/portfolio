@@ -136,29 +136,23 @@ li {
           height: 100%;
 
           li {
+            color: $is-primary;
+            text-decoration: none;
+            font-size: 20px;
             height: 100%;
             align-items: center;
             display: flex;
 
-            a {
-              color: $is-primary;
-              text-decoration: none;
-              font-size: 20px;
-              height: 100%;
-              align-items: center;
-              display: flex;
+            &.active {
+              position: relative;
 
-              &.active {
-                position: relative;
-
-                &::before {
-                  content: "";
-                  position: absolute;
-                  width: 100%;
-                  height: 4px;
-                  background: $is-primary;
-                  bottom: 0;
-                }
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background: $is-primary;
+                bottom: 0;
               }
             }
           }

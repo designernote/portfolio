@@ -25,14 +25,14 @@
           <h1 class="logo">하루조각</h1>
           <nav>
             <ul>
-              <li><a href="" class="active">2023</a></li>
-              <li><a href="">2022</a></li>
-              <li><a href="">2021 ~ 2020</a></li>
+              <li class="active">2023</li>
+              <li>2022</li>
+              <li>2021 ~ 2020</li>
             </ul>
           </nav>
         </div>
       </header>
-      <div class="container">
+      <div class="container no1">
         <h1>
           하루조각<small
             >LG CNS 마이데이타 기반 하이브리드앱 운영 및 개선</small
@@ -62,7 +62,8 @@
             <div class="img_12"></div>
           </div>
         </div>
-
+      </div>
+      <div class="container no2">
         <h1>라이나생명<small>라이나 생명 반응형 웹 리뉴얼</small></h1>
 
         <ul class="desc">
@@ -157,6 +158,34 @@
           console.log("sdfsdfsdf");
 
           items.forEach((e) => {
+            e.classList.remove("active");
+          });
+
+          item.classList.add("active");
+        });
+      });
+
+      const items_header = document.querySelectorAll("header nav ul li");
+      const container1 = document.querySelector(".container.no1");
+      const container2 = document.querySelector(".container.no2");
+
+      if (items_header) {
+        console.log(items_header, "headers");
+      }
+
+      items_header.forEach((item, idx) => {
+        console.log(idx, "dhkekekek");
+
+        item.addEventListener("click", () => {
+          items_header.forEach((e) => {
+            if (idx === 0) {
+              console.log("첫번째");
+              container1.style.display = "block";
+              container2.style.display = "none";
+            } else {
+              container1.style.display = "none";
+              container2.style.display = "block";
+            }
             e.classList.remove("active");
           });
 

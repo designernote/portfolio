@@ -134,11 +134,6 @@ li {
   height: 100%;
 }
 .wrap header .inner nav ul li {
-  height: 100%;
-  align-items: center;
-  display: flex;
-}
-.wrap header .inner nav ul li a {
   color: #333;
   text-decoration: none;
   font-size: 20px;
@@ -146,10 +141,10 @@ li {
   align-items: center;
   display: flex;
 }
-.wrap header .inner nav ul li a.active {
+.wrap header .inner nav ul li.active {
   position: relative;
 }
-.wrap header .inner nav ul li a.active::before {
+.wrap header .inner nav ul li.active::before {
   content: "";
   position: absolute;
   width: 100%;
