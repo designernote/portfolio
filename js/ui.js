@@ -3,7 +3,7 @@ $().ready(function () {
 });
 
 const ddd = (e) => {
-  // alert("sdfsdf");
+  alert("sdfsdf");
 };
 
 ddd();
