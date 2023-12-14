@@ -198,9 +198,6 @@ li {
   overflow-x: auto;
   gap: 20px;
 }
-.wrap .container .thum-area.area_3 {
-  opacity: 0;
-}
 .wrap .container .thum-area .img_1 {
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
