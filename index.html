@@ -20,9 +20,6 @@
       src="node_modules/jquery/dist/jquery.js"
     ></script>
     <script type="text/javascript" src="node_modules/aos/dist/aos.js"></script>
-    <script type="text/javascript">
-      AOS.init();
-    </script>
   </head>
   <body>
     <header>
@@ -148,10 +145,16 @@
     </div>
 
     <script type="text/javascript">
+      AOS.init();
+    </script>
+
+    <script type="text/javascript">
       const ddd = (e) => {
         // alert("sdfsdf");
       };
       ddd();
+
+      AOS.init();
 
       document.addEventListener("aos:in", ({ detail }) => {
         console.log("animated in", detail);
