@@ -228,6 +228,10 @@ li {
       overflow-x: auto;
       gap: 20px;
 
+      &.area_3 {
+        opacity: 0;
+      }
+
       // &.area {
       //   @for $i from 1 to 99 {
       //     &_#{$i} {
