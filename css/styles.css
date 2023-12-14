@@ -157,7 +157,7 @@ header .inner nav ul li.active::before {
 }
 .wrap .container {
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 0 20px 20px;
 }
 .wrap .container.no2 {
   display: none;
@@ -192,7 +192,7 @@ header .inner nav ul li.active::before {
   margin-right: 5px;
 }
 .wrap .container .projects {
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 .wrap .container .thum-area {
   display: flex;
