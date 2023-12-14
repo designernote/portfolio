@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/designernote/portfolio#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "jquery": "^3.7.1"
   }
 }

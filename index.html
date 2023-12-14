@@ -11,75 +11,15 @@
     <meta name="" content="" />
     <link rel="apple-touch-icon" href="./logo192.png" />
     <link rel="manifest" href="./manifest.json" />
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>캐서린의 포트폴리오</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <script
-      type="text/javascript"
-      src="node_modules/jquery/dist/jquery.js"
-    ></script>
-
-    <script type="text/javascript">
-      const ddd = (e) => {
-        // alert("sdfsdf");
-      };
-
-      ddd();
-
-      document.addEventListener("DOMContentLoaded", () => {
-        // 탭메뉴
-        const items_header = document.querySelectorAll("header nav ul li");
-        const container1 = document.querySelector(".container.no1");
-        const container2 = document.querySelector(".container.no2");
-
-        if (items_header) {
-          console.log(items_header, "headers");
-        }
-
-        items_header.forEach((item, idx) => {
-          console.log(idx, "dhkekekek");
-
-          item.addEventListener("click", () => {
-            items_header.forEach((e) => {
-              if (idx === 0) {
-                console.log("첫번째");
-                container1.style.display = "block";
-                container2.style.display = "none";
-              } else {
-                container1.style.display = "none";
-                container2.style.display = "block";
-              }
-              e.classList.remove("active");
-            });
-
-            item.classList.add("active");
-          });
-        });
-
-        // 아래 썸네일들
-        const items = document.querySelectorAll(".area_1 > div");
-
-        if (items) {
-          console.log(items, "items");
-        }
-
-        items.forEach((item) => {
-          console.log("saaaa");
-          item.addEventListener("click", () => {
-            console.log("sdfsdfsdf");
-
-            items.forEach((e) => {
-              e.classList.remove("active");
-            });
-
-            item.classList.add("active");
-          });
-        });
-      });
-    </script>
-    <script type="text/javascript" src="js/ui.js"></script>
   </head>
   <body>
-    <script type="text/javascript" src="js/ui.js"></script>
     <div class="wrap">
       <header>
         <div class="inner">
@@ -116,7 +56,7 @@
             <div class="img_7"></div>
             <div class="img_8"></div>
           </div>
-          <div class="thum-area area_3">
+          <div class="thum-area area_3" data-aos="fade-up">
             <div class="img_9"></div>
             <div class="img_10"></div>
             <div class="img_11"></div>
@@ -195,6 +135,10 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="js/ui.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+      }); // aos 초기화
+    </script>
   </body>
 </html>
